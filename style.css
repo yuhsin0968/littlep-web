@@ -40,3 +40,53 @@ h1 {
     color: #555;
 }
 
+/* 表單排版 */
+.form-row {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-row label {
+    font-size: 14px;
+}
+
+.form-row input {
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* 下三路選擇排版 */
+.downroad-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.downroad-row select {
+    padding: 4px 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* 按鈕樣式 */
+#runPredictionBtn {
+    margin-top: 8px;
+    padding: 8px 16px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: #007aff;
+    color: white;
+    cursor: pointer;
+}
+
+#runPredictionBtn:hover {
+    opacity: 0.9;
+}

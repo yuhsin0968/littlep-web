@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>小P 百家樂預測 - 網頁版</title>
+    <title>小P 百家樂預測系統（Web 版）</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- 連到樣式檔 -->
@@ -13,25 +12,68 @@
     <div class="app-container">
         <h1>小P 百家樂預測系統（Web 版）</h1>
 
-        <!-- 之後可以放預測結果 -->
+        <!-- 預測結果區 -->
         <section class="panel">
             <h2>預測結果</h2>
             <div id="predictionResult">目前尚未預測</div>
         </section>
 
-        <!-- 之後放珠盤路 / 輸入按鈕 -->
+        <!-- 輸入區 -->
         <section class="panel">
-            <h2>輸入區（之後會接上莊 / 閒 / 和 按鈕）</h2>
-            <p>這裡之後會放：莊 / 閒 / 和 按鈕、牌值輸入、珠盤路顯示。</p>
+            <h2>輸入區</h2>
+
+            <div class="form-row">
+                <label for="beadRoadInput">珠盤路（請用空格輸入 B / P，例如：B P B B P）</label>
+                <input id="beadRoadInput" type="text" placeholder="例如：B P B B P">
+            </div>
+
+            <div class="form-row">
+                <label for="bankerCardsInput">莊家牌點數（用空格輸入，例如：4 6 或 4 6 0）</label>
+                <input id="bankerCardsInput" type="text" placeholder="例如：4 6">
+            </div>
+
+            <div class="form-row">
+                <label for="playerCardsInput">閒家牌點數（用空格輸入，例如：9 1）</label>
+                <input id="playerCardsInput" type="text" placeholder="例如：9 1">
+            </div>
+
+            <div class="form-row">
+                <label>下三路最後一顆顏色（紅=R、藍=B，可先只用一兩個）</label>
+                <div class="downroad-row">
+                    <span>大眼路：</span>
+                    <select id="bigEyeSelect">
+                        <option value="">（不設定）</option>
+                        <option value="R">紅（偏莊）</option>
+                        <option value="B">藍（偏閒）</option>
+                    </select>
+
+                    <span>小路：</span>
+                    <select id="smallRoadSelect">
+                        <option value="">（不設定）</option>
+                        <option value="R">紅（偏莊）</option>
+                        <option value="B">藍（偏閒）</option>
+                    </select>
+
+                    <span>曱甴路：</span>
+                    <select id="cockroachSelect">
+                        <option value="">（不設定）</option>
+                        <option value="R">紅（偏莊）</option>
+                        <option value="B">藍（偏閒）</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="runPredictionBtn">開始預測</button>
         </section>
 
+        <!-- 系統訊息 -->
         <section class="panel">
             <h2>系統訊息</h2>
-            <div id="logArea"></div>
+            <div id="logArea">系統已啟動，請輸入資料後按「開始預測」。</div>
         </section>
     </div>
 
-    <!-- 連到主程式檔 -->
+    <!-- 主程式 -->
     <script src="main.js"></script>
 </body>
 </html>
